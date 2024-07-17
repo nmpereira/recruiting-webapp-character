@@ -2,42 +2,6 @@ import React, { useEffect, useState } from "react";
 import { getModifier } from "../utils/utils";
 import { SKILL_LIST } from "../consts";
 
-/**
-[
-    {
-        "name": "Character 1",
-        "attributes": {
-            "Strength": 10,
-            "Dexterity": 10,
-            "Constitution": 10,
-            "Intelligence": 10,
-            "Wisdom": 10,
-            "Charisma": 10
-        },
-        "skills": {
-            "Acrobatics": 0,
-            "Animal Handling": 0,
-            "Arcana": 0,
-            "Athletics": 0,
-            "Deception": 0,
-            "History": 0,
-            "Insight": 0,
-            "Intimidation": 0,
-            "Investigation": 0,
-            "Medicine": 0,
-            "Nature": 0,
-            "Perception": 0,
-            "Performance": 0,
-            "Persuasion": 0,
-            "Religion": 0,
-            "Sleight of Hand": 0,
-            "Stealth": 0,
-            "Survival": 0
-        }
-    }
-]
- */
-
 const SkillList = ({ character, setCharacters, index }) => {
   const [skillPoints, setSkillPoints] = useState(5);
   const getIntelligenceModifier = getModifier(
@@ -111,13 +75,6 @@ const SkillList = ({ character, setCharacters, index }) => {
           character.attributes[attributeModifier]
         );
         return (
-          // <div key={skill}>
-          //     <span>{skill}: {character.skills[skill].points} (Modifier: {character.skills[skill].attributeModifier}): {attributeModifier} </span>
-          //     <button onClick={() => incrementSkill(skill)}>+</button>
-          //     <button onClick={() => decrementSkill(skill)}>-</button>
-          //     <span> Total: {character.skills[skill].points + attributeModifier}</span>
-          // </div>
-
           <div key={skill}>
             <span>
               {skill}: {character.skills[skill]} (Modifier: {attributeModifier}

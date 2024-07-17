@@ -9,8 +9,6 @@ import { CharacterContext } from "../utils/context";
 
 const Character = ({ character, index }) => {
   const { setCharacters } = useContext(CharacterContext);
-  // const [attributes, setAttributes] = useState(defaultAttributes(ATTRIBUTE_LIST));
-  // const [skills, setSkills] = useState(defaultSkills(SKILL_LIST));
   const [selectedClass, setSelectedClass] = useState(null);
 
   return (
@@ -18,8 +16,6 @@ const Character = ({ character, index }) => {
       <h2>{character.name}</h2>
       <div className="character">
         <AttributeList
-          // attributes={attributes}
-          // setAttributes={setAttributes}
           index={index}
           character={character}
           setCharacters={setCharacters}
@@ -29,7 +25,6 @@ const Character = ({ character, index }) => {
           index={index}
           character={character}
           setSelectedClass={setSelectedClass}
-          //   attributes={attributes}
         />
         <ClassMin
           selectedClass={selectedClass}
@@ -37,9 +32,6 @@ const Character = ({ character, index }) => {
           setSelectedClass={setSelectedClass}
         />
         <SkillList
-          // skills={skills}
-          // setSkills={setSkills}
-          // attributes={attributes}
           index={index}
           character={character}
           setCharacters={setCharacters}
@@ -50,7 +42,7 @@ const Character = ({ character, index }) => {
 };
 
 const CharactersWrapper = () => {
-  const { characters, setCharacters } = useContext(CharacterContext);
+  const { characters } = useContext(CharacterContext);
 
   return (
     <div className="character-section">

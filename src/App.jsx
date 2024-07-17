@@ -1,4 +1,4 @@
-import { useState, useEffect, useContext } from "react";
+import { useState } from "react";
 import "./App.css";
 
 import TopButtonSection from "./components/TopButtonSection";
@@ -7,10 +7,6 @@ import CharactersWrapper from "./components/Characters";
 
 function App() {
   const [characters, setCharacters] = useState([]);
-
-  useEffect(() => {
-    console.log({ characters });
-  }, [characters]);
 
   return (
     <div className="App">
