@@ -22,7 +22,7 @@ const ClassList = ({ CLASS_LIST, setSelectedClass, character }) => {
     });
     // if the attributes meet the requirements, set the state to true
     setMeetsRequirements(meetsRequirements);
-  }, [character]);
+  }, [character, CLASS_LIST]);
 
   return (
     <div className="class-list">

@@ -40,6 +40,7 @@ const AttributeList = ({ character, index, setCharacters }) => {
       return newCharacters;
     });
   };
+
   const getTotalAttributePoints = () => {
     return Object.values(character.attributes).reduce(
       (acc, curr) => acc + curr
