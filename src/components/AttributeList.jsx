@@ -41,6 +41,7 @@ const AttributeList = ({ character, index, setCharacters }) => {
     });
   };
 
+  // get total attribute points
   const getTotalAttributePoints = () => {
     return Object.values(character.attributes).reduce(
       (acc, curr) => acc + curr
@@ -58,8 +59,7 @@ const AttributeList = ({ character, index, setCharacters }) => {
             {attribute}: {character.attributes[attribute]}
           </span>
           <span>
-            {" "}
-            (Modifier: {getModifier(character.attributes[attribute])}){" "}
+            (Modifier: {getModifier(character.attributes[attribute])})
           </span>
 
           <button onClick={() => handleIncrement(attribute)}>+</button>

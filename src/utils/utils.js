@@ -1,11 +1,26 @@
+/**
+ * Get the modifier for an attribute. The modifier is calculated by adding 1 to every 2 points above 10.
+ * @param {string} attribute
+ * @returns number
+ */
 export const getModifier = (attribute) => {
   let modifier = Math.floor((attribute - 10) / 2);
   return modifier;
 };
 
+/**
+ * The default requirements for each class are set to false.
+ */
 export const defaultRequirements = (CLASS_LIST) =>
   Object.keys(CLASS_LIST).map(() => false);
 
+/**
+ * Create a new character with a name, attributes and skills.
+ * @param {{name: string, attributes: {...}, skills: {...}}[]} characters
+ * @param {string[]} ATTRIBUTE_LIST
+ * @param {{name: string, attributeModifier: string}[]} SKILL_LIST
+ * @returns {{name: string, attributes: {...}, skills: {...}}} newCharacter
+ */
 export const createNewCharacter = ({
   characters,
   ATTRIBUTE_LIST,
