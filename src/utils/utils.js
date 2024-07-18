@@ -32,14 +32,17 @@ export const createNewCharacter = ({
     skills: {},
   };
 
+  // Set the name of the new character.
   newCharacter.name = `Character ${characters.length + 1}`;
 
+  // Add the attributes to the new character with an initial value of 10.
   for (let i = 0; i < ATTRIBUTE_LIST.length; i++) {
     const attribute = ATTRIBUTE_LIST[i];
     const initialPoints = 10;
     newCharacter.attributes[attribute] = initialPoints;
   }
 
+  // Add the skills to the new character with an initial value of 0.
   for (let i = 0; i < SKILL_LIST.length; i++) {
     const skill = SKILL_LIST[i];
     const initialPoints = 0;
