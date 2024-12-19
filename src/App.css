@@ -106,7 +106,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* space out the spans */
   gap: 8px;
 }
 
